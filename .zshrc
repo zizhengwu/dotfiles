@@ -71,11 +71,11 @@ bindkey '^Z' fancy-ctrl-z
 # AutoJump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-# rvm
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 # nvm
 source $HOME/.nvm/nvm.sh
+
+# rbenv
+export PATH="$HOME/.rbenv/shims:$PATH"
 
 # ls with color
 eval `gdircolors ~/.dir_colors`
@@ -86,3 +86,4 @@ compinit
 
 # Vim 256 Colors
 export TERM='xterm-256color'
+

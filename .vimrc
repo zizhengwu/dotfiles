@@ -36,7 +36,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
 " basic config
 syntax enable
 set number
@@ -91,24 +90,24 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
 
-" Key Mappings for YouCompleteMe
+" key Mappings for YouCompleteMe
 nnoremap <Leader>di :YcmCompleter GoToDeclaration<Enter>
 nnoremap <Leader>dd :YcmCompleter GoToDefinition<Enter>
 nnoremap <Leader>dg :YcmCompleter GoTo<Enter>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 
-" Key Mappings for NERDTree
+" key Mappings for NERDTree
 nnoremap <Leader><Leader>n :NERDTreeTabsToggle<CR>
 
-" Folding
+" folding
 set foldmethod=syntax
 set foldcolumn=1
 set mouse=a
 
-" Gubbins
+" gubbins
 nmap ? /\<\><Left><Left>
 
-" Put plugins and dictionaries in this dir (also on Windows)
+" put plugins and dictionaries in this dir (also on Windows)
 let vimDir = '$HOME/.vim'
 let &runtimepath.=','.vimDir
 if has('persistent_undo')
@@ -120,22 +119,8 @@ if has('persistent_undo')
     set undofile
 endif
 
-" Quick copy all to system clipboard
+" quick copy all to system clipboard
 nnoremap <Leader><Leader>c ggVG"+y
-
-" configure expanding of tabs for various file types
-au BufRead,BufNewFile *.py set expandtab
-au BufRead,BufNewFile *.c set noexpandtab
-au BufRead,BufNewFile *.h set noexpandtab
-au BufRead,BufNewFile Makefile* set noexpandtab
-
-" configure editor with tabs and nice stuff...
-set expandtab           " enter spaces when tab is pressed
-set textwidth=120       " break lines when line length increases
-set tabstop=4           " use 4 spaces to represent tab
-set softtabstop=4
-set shiftwidth=4        " number of spaces to use for auto indent
-set autoindent          " copy indent from current line when starting a new line
 
 " make backspaces more powerfull
 set backspace=indent,eol,start

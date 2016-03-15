@@ -49,13 +49,13 @@ source $ZSH/oh-my-zsh.sh
 # bindkey
 bindkey '^R' history-incremental-search-backward
 
-# Alias
+# alias
 alias forcepull='git fetch --all;git reset --hard origin/master'
 alias rm='rmtrash'
 alias vim='mvim -v'
 bindkey '^[[Z' reverse-menu-complete
 
-# Ctrz-Z to fg Vim
+# ctrz-Z to fg Vim
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
     BUFFER="fg"
@@ -68,7 +68,7 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
-# AutoJump
+# autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # nvm
@@ -77,6 +77,9 @@ source $HOME/.nvm/nvm.sh
 # rbenv
 export PATH="$HOME/.rbenv/shims:$PATH"
 
+# pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 # ls with color
 eval `gdircolors ~/.dir_colors`
 alias ls='gls --color'
@@ -84,6 +87,10 @@ zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 autoload -Uz compinit
 compinit
 
-# Vim 256 Colors
+# vim 256 Colors
 export TERM='xterm-256color'
 
+# zaw
+source /Users/zizheng/dotfiles/zaw/zaw.zsh
+bindkey '^R' zaw-history
+zstyle ':filter-select' hist-find-no-dups yes

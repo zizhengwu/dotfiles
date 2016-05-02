@@ -85,3 +85,25 @@ source $ZSH/oh-my-zsh.sh
 
 . /usr/share/autojump/autojump.sh
 TERM=xterm-256color
+
+# NVM
+export NVM_DIR="/home/zizheng/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# hadoop env
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export HADOOP_HOME=/home/zizheng/Applications/hadoop-2.7.2
+
+# zaw
+source ~/dotfiles/zaw/zaw.zsh
+bindkey '^R' zaw-history
+zstyle ':filter-select' hist-find-no-dups yes

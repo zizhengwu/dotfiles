@@ -88,7 +88,7 @@ set laststatus=2
 " YouCompleteMe
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
+let g:ycm_path_to_python_interpreter = '/Users/zizheng/.pyenv/shims/python'
 
 " key Mappings for YouCompleteMe
 nnoremap <Leader>di :YcmCompleter GoToDeclaration<Enter>

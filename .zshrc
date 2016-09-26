@@ -42,6 +42,7 @@ ZSH_THEME="philips"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -52,7 +53,6 @@ bindkey '^R' history-incremental-search-backward
 # alias
 alias forcepull='git fetch --all;git reset --hard origin/master'
 alias rm='rmtrash'
-alias vim='mvim -v'
 bindkey '^[[Z' reverse-menu-complete
 
 # ctrz-Z to fg Vim

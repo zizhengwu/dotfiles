@@ -51,6 +51,7 @@ source $ZSH/oh-my-zsh.sh
 bindkey '^R' history-incremental-search-backward
 
 # alias
+alias vim='nvim'
 alias forcepull='git fetch --all;git reset --hard origin/master'
 alias rm='rmtrash'
 bindkey '^[[Z' reverse-menu-complete

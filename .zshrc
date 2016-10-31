@@ -99,11 +99,8 @@ eval "$(pyenv init -)"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# hadoop env
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-export HADOOP_HOME=/home/zizheng/Applications/hadoop-2.7.2
-
 # zaw
 source ~/dotfiles/zaw/zaw.zsh
 bindkey '^R' zaw-history
 zstyle ':filter-select' hist-find-no-dups yes
+

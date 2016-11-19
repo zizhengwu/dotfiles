@@ -10,17 +10,17 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Bundle 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'terryma/vim-expand-region'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-commentary'
 Plugin 'Raimondi/delimitMate'
-Plugin 'romainl/Apprentice'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'flazz/vim-colorschemes'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -60,7 +60,7 @@ set showmatch
 
 " colors
 set t_Co=256
-set background=dark
+set background=light
 let macvim_skip_colorscheme=1
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
@@ -68,10 +68,10 @@ if &term =~ '256color'
   " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
   set t_ut=
 endif
-colorscheme apprentice
+colorscheme Tomorrow
 
 " font
-set guifont=Source\ Code\ Pro:h13
+set guifont=Inziu\ Iosevka\ CL:h20
 
 " cursor no blink
 set gcr=a:blinkon0

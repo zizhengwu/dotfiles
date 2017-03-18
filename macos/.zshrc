@@ -92,7 +92,7 @@ compinit
 export TERM='xterm-256color'
 
 # zaw
-source /Users/zizheng/dotfiles/zaw/zaw.zsh
+source /Users/zizheng/git/dotfiles/zaw/zaw.zsh
 bindkey '^R' zaw-history
 zstyle ':filter-select' hist-find-no-dups yes
 

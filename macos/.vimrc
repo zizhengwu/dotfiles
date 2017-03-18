@@ -100,8 +100,6 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <Leader><Leader>n :NERDTreeTabsToggle<CR>
 
 " folding
-set foldmethod=syntax
-set foldcolumn=1
 set mouse=a
 
 " gubbins

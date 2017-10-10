@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -67,6 +67,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR="subl -w"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -87,7 +88,15 @@ source $ZSH/oh-my-zsh.sh
 TERM=xterm-256color
 
 # zaw
-source ~/Git/dotfiles/zaw/zaw.zsh
+source $HOME/Git/dotfiles/zaw/zaw.zsh
 bindkey '^R' zaw-history
 zstyle ':filter-select' hist-find-no-dups yes
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+# google
+if [ -r $HOME/.zshrc_google ] ; then
+  source $HOME/.zshrc_google
+fi

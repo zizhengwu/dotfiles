@@ -5,7 +5,10 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gallois"
+ZSH_THEME="bullet-train"
+# Customize the train
+BULLETTRAIN_CONTEXT_BG=white
+BULLETTRAIN_DIR_EXTENDED=2
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -15,7 +18,7 @@ ZSH_THEME="gallois"
 CASE_SENSITIVE="true"
 
 # Uncomment this to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how often before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
@@ -40,9 +43,8 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(gitfast alias-tips zsh-syntax-highlighting)
 
-DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -52,22 +54,8 @@ bindkey '^R' history-incremental-search-backward
 
 # alias
 alias vim='nvim'
-alias forcepull='git fetch --all;git reset --hard origin/master'
 alias rm='rmtrash'
 bindkey '^[[Z' reverse-menu-complete
-
-# ctrz-Z to fg Vim
-fancy-ctrl-z () {
-  if [[ $#BUFFER -eq 0 ]]; then
-    BUFFER="fg"
-    zle accept-line
-  else
-    zle push-input
-    zle clear-screen
-  fi
-}
-zle -N fancy-ctrl-z
-bindkey '^Z' fancy-ctrl-z
 
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
@@ -95,4 +83,3 @@ export TERM='xterm-256color'
 source /Users/zizheng/git/dotfiles/zaw/zaw.zsh
 bindkey '^R' zaw-history
 zstyle ':filter-select' hist-find-no-dups yes
-

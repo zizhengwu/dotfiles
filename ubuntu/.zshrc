@@ -86,6 +86,7 @@ export EDITOR="subl -n -w"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gg="git log --graph --decorate --oneline"
 
 TERM=xterm-256color
 

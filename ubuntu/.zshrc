@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -119,8 +126,16 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # google
-if [ -r $HOME/.zshrc_google ] ; then
-  source $HOME/.zshrc_google
+if [ -r $HOME/.zshrc_google_shared ] ; then
+  source $HOME/.zshrc_google_shared
+fi
+
+if [ -r $HOME/.zshrc_google_glinux ] ; then
+  source $HOME/.zshrc_google_glinux
+fi
+
+if [ -r $HOME/.zshrc_google_macos ] ; then
+  source $HOME/.zshrc_google_macos
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

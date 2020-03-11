@@ -1,0 +1,10 @@
+# Allow zsh to work with build/envsetup.sh
+setopt +o nomatch
+
+# Enable auto-completion for `lunch` on zsh
+autoload bashcompinit
+bashcompinit
+
+# MacOS Devtools Proxy
+export PATH=~/mdproxy:$PATH
+source ~/mdproxy/g4d_completion_rc

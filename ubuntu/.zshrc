@@ -92,7 +92,7 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR="subl -n -w"
+  export EDITOR="code -n -w"
 fi
 
 # Compilation flags

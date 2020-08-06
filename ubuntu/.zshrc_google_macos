@@ -6,5 +6,7 @@ autoload bashcompinit
 bashcompinit
 
 # MacOS Devtools Proxy
-export PATH=~/mdproxy:$PATH
-source ~/mdproxy/g4d_completion_rc
+source /Users/zizhengwu/mdproxy/data/mdproxy_zshrc # MDPROXY-ZSHRC
+
+# Git
+export PATH=/usr/local/git/current/bin:$PATH

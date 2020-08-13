@@ -29,3 +29,6 @@ export BOQ_CANARY=NO
 # fun
 # prodcertstatus -q &&
 #   /google/data/ro/users/di/diamondm/engfortunes/fortune.sh
+
+# PATH
+PATH=$PATH:/usr/lib/google-golang/bin

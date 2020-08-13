@@ -114,7 +114,7 @@ alias gg="git log --graph --decorate --oneline"
 TERM=xterm-256color
 
 # zaw
-source $HOME/Git/dotfiles/zaw/zaw.zsh
+source $HOME/git/dotfiles/zaw/zaw.zsh
 bindkey '^R' zaw-history
 zstyle ':filter-select' hist-find-no-dups yes
 

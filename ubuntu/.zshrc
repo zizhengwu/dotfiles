@@ -63,7 +63,7 @@ plugins=(git alias-tips zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH="$HOME/.local/bin:$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:~/go/bin:$HOME/bin"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

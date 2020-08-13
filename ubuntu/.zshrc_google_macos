@@ -6,7 +6,7 @@ autoload bashcompinit
 bashcompinit
 
 # MacOS Devtools Proxy
-source /Users/zizhengwu/mdproxy/data/mdproxy_zshrc # MDPROXY-ZSHRC
+[[ -e /Users/zizhengwu/mdproxy/data/mdproxy_zshrc ]] && source /Users/zizhengwu/mdproxy/data/mdproxy_zshrc # MDPROXY-ZSHRC
 
 # Git
 export PATH=/usr/local/git/current/bin:$PATH

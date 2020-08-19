@@ -18,3 +18,7 @@ g4p() {
   clientdir="$(g4 -ztag -F"%client%" describe -c $1)"
   nohup g4 -c ${clientdir} presubmit --ignore_presubmit_errors >/dev/null 2>&1 &
 }
+
+# Anthos bare metal
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Documents/gcr.json"
+export IMAGE_REGISTRY="gcr.io/baremetal-zizhengwu"

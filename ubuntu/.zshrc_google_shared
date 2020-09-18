@@ -21,4 +21,3 @@ g4p() {
 
 # Anthos bare metal
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Documents/baremetal-zizhengwu/gcr.json"
-export IMAGE_REGISTRY="gcr.io/baremetal-zizhengwu"

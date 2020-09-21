@@ -32,3 +32,9 @@ export BOQ_CANARY=NO
 
 # PATH
 PATH=$PATH:/usr/lib/google-golang/bin
+
+# linuxbrew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+# kubectl
+source <(kubectl completion zsh)

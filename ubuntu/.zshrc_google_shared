@@ -21,3 +21,5 @@ g4p() {
 
 # Anthos bare metal
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Documents/baremetal-zizhengwu/gcr.json"
+export KEEP_CLUSTER_IN_E2E_TEST=false
+export TEST_UPGARDE_IN_E2E_TEST=false

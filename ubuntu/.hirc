@@ -1,0 +1,5 @@
+privacy:  {
+  export_from_git5:  true
+  export_from_local:  true
+}
+user_consents_to_publishing_history:  true

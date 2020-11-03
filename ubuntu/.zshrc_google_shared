@@ -23,3 +23,6 @@ g4p() {
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Documents/baremetal-zizhengwu/gcr.json"
 export KEEP_CLUSTER_IN_E2E_TEST=true
 export TEST_UPGRADE_IN_E2E_TEST=false
+gcloudssh() {
+  gcloud compute ssh "$1" --zone us-central1-a -- -o 'ProxyCommand=corp-ssh-helper %h %p'
+}

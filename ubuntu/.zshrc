@@ -138,5 +138,8 @@ if [ -r $HOME/.zshrc_google_macos ] ; then
   source $HOME/.zshrc_google_macos
 fi
 
+# iterm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

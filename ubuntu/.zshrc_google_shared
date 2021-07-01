@@ -26,3 +26,8 @@ export TEST_UPGRADE_IN_E2E_TEST=false
 gcloudssh() {
   gcloud compute ssh "$1" --zone us-central1-a -- -o 'ProxyCommand=corp-ssh-helper %h %p'
 }
+gauth() {
+  gcert
+  gcloud auth print-access-token
+  gsutil cp gs://anthos-baremetal-staging/cni-plugins/v0.8.7-gke.0/cni-plugins-linux-amd64-v0.8.7-gke.0.tgz /tmp
+}

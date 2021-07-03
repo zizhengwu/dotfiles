@@ -1,5 +1,4 @@
 # google internal tools
-alias hg='chg'
 alias irabbit='iblaze --iblaze_blaze_binary rabbit'
 
 # config

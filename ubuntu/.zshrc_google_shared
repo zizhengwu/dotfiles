@@ -18,6 +18,10 @@ g4p() {
   nohup g4 -c ${clientdir} presubmit --ignore_presubmit_errors >/dev/null 2>&1 &
 }
 
+hgforget() {
+  hg cls-setnumber --remove -c $1 && hg prune $1
+}
+
 # Anthos bare metal
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Documents/baremetal-zizhengwu/gcr.json"
 export KEEP_CLUSTER_IN_E2E_TEST=true

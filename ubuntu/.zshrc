@@ -117,6 +117,7 @@ TERM=xterm-256color
 source $HOME/git/dotfiles/zaw/zaw.zsh
 bindkey '^R' zaw-history
 zstyle ':filter-select' hist-find-no-dups yes
+bindkey -M filterselect '^M' accept-search
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"

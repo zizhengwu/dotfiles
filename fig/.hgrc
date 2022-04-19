@@ -1,0 +1,27 @@
+[alias]
+export = uploadchain
+
+[ui]
+username = zizhengwu
+paginate = never
+merge = bcomp
+
+[extensions]
+extdiff =
+churn =
+purge =
+strip =
+journal =
+
+[merge-tools]
+bcomp.args = $local $other $base $output
+
+[extdiff]
+cmd.bcomp = /usr/local/bin/bcomp
+
+[trainingwheels]
+allow-push-incomplete-cl=true
+prevent-push-dirty=false
+
+[alias]
+keep = shelve --keep --name

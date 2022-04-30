@@ -4,6 +4,7 @@ sudo glinux-add-repo -b typescript stable
 sudo apt update
 sudo apt -y install kubectl
 sudo apt install -y git
+sudo apt install -y wget
 sudo apt install -y stow
 sudo apt install -y google-cloud-sdk
 sudo apt install -y code visual-studio-code-google3

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 ZPLUGINDIR=$HOME/.oh-my-zsh/custom/plugins
 ZTHEMEDIR=$HOME/.oh-my-zsh/custom/themes
 

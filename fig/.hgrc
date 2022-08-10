@@ -25,3 +25,5 @@ prevent-push-dirty=false
 
 [alias]
 keep = shelve --keep --name
+fixgo = ! $HG fix && build_cleaner && glaze && hg ps -n | xargs dirname | uniq | xargs glaze
+

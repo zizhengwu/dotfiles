@@ -6,4 +6,6 @@ if cd $ZPLUGINDIR/fast-syntax-highlighting; then git pull; else git clone https:
 
 if cd $ZTHEMEDIR/powerlevel10k; then git pull; else git clone https://github.com/romkatv/powerlevel10k.git $ZTHEMEDIR/powerlevel10k; fi
 
+if cd $ZPLUGINDIR/F-Sy-H; then git pull; else git clone https://github.com/z-shell/F-Sy-H.git $ZPLUGINDIR/F-Sy-H; fi
+
 zsh -ic "omz update"

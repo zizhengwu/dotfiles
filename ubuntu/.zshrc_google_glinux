@@ -13,6 +13,7 @@ alias get_mint="/google/data/ro/projects/gaiamint/bin/get_mint"
 alias devsite="/google/data/ro/projects/devsite/devsite"
 alias buildfix='/google/data/ro/teams/ads-integrity/buildfix'
 alias cclean='/google/src/head/depot/google3/devtools/maintenance/cclean/cclean'
+alias polyjuice='/google/bin/releases/internetto/tools/polyjuice/polyjuice'
 ## Hi
 source /etc/bash.bashrc.d/shell_history_forwarder.sh
 

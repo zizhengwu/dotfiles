@@ -1,0 +1,11 @@
+build --compilation_mode=opt
+import %workspace%/dart/blazerc
+
+test --curses=yes
+test --notest_loasd
+test --test_output=errors
+test --build_tests_only
+test --test_summary=terse
+
+javahotswap --java_hotswap=5005
+

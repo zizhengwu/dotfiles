@@ -14,6 +14,7 @@ alias devsite="/google/data/ro/projects/devsite/devsite"
 alias buildfix='/google/data/ro/teams/ads-integrity/buildfix'
 alias cclean='/google/src/head/depot/google3/devtools/maintenance/cclean/cclean'
 alias polyjuice='/google/bin/releases/internetto/tools/polyjuice/polyjuice'
+alias apido=/google/data/ro/teams/oneplatform/apido
 ## Hi
 source /etc/bash.bashrc.d/shell_history_forwarder.sh
 

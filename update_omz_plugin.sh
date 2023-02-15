@@ -1,6 +1,7 @@
 #!/bin/zsh
 ZPLUGINDIR=$HOME/.oh-my-zsh/custom/plugins
 ZTHEMEDIR=$HOME/.oh-my-zsh/custom/themes
+ZSH=$HOME/.oh-my-zsh
 
 if cd $ZPLUGINDIR/fast-syntax-highlighting; then
     git pull
@@ -16,4 +17,4 @@ fi
 
 if cd $ZPLUGINDIR/F-Sy-H; then git pull; else git clone https://github.com/z-shell/F-Sy-H.git $ZPLUGINDIR/F-Sy-H; fi
 
-zsh -ic "omz update"
+$ZSH/tools/upgrade.sh

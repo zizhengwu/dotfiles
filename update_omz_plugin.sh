@@ -9,6 +9,12 @@ else
     git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git $ZPLUGINDIR/fast-syntax-highlighting
 fi
 
+if cd $ZPLUGINDIR/fzf-z; then
+    git pull
+else
+    git clone https://github.com/andrewferrier/fzf-z.git $ZPLUGINDIR/fzf-z
+fi
+
 if cd $ZTHEMEDIR/powerlevel10k; then
     git pull
 else

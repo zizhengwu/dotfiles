@@ -113,11 +113,8 @@ alias gg="git log --graph --decorate --oneline"
 
 TERM=xterm-256color
 
-# zaw
-source $HOME/git/dotfiles/zaw/zaw.zsh
-bindkey '^R' zaw-history
-zstyle ':filter-select' hist-find-no-dups yes
-bindkey -M filterselect '^M' accept-search
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"

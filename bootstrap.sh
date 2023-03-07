@@ -7,6 +7,7 @@ sudo apt install -y git
 sudo apt install -y wget
 sudo apt install -y python3
 sudo apt install -y stow
+sudo apt install -y fzf
 sudo apt install -y google-cloud-sdk
 sudo apt install -y code visual-studio-code-google3
 sudo apt install -y git-remote-google

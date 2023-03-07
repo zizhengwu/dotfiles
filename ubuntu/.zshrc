@@ -114,7 +114,9 @@ alias gg="git log --graph --decorate --oneline"
 TERM=xterm-256color
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # macOS: $(brew --prefix)/opt/fzf/install
+[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh # debian
+[ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh # debian
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"

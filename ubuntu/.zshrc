@@ -125,6 +125,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# rbenv
+eval "$(rbenv init -)"
+
 # google
 if [ -r $HOME/.zshrc_google_shared ] ; then
   source $HOME/.zshrc_google_shared

@@ -4,6 +4,7 @@ sudo glinux-add-repo -b typescript stable
 sudo apt update
 sudo apt -y install kubectl
 sudo apt install -y git
+sudo apt install -y intellij-ue-beta
 sudo apt install -y wget
 sudo apt install -y python3
 sudo apt install -y stow

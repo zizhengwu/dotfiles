@@ -15,6 +15,7 @@ alias buildfix='/google/data/ro/teams/ads-integrity/buildfix'
 alias cclean='/google/src/head/depot/google3/devtools/maintenance/cclean/cclean'
 alias polyjuice='/google/bin/releases/internetto/tools/polyjuice/polyjuice'
 alias apido=/google/data/ro/teams/oneplatform/apido
+alias cuskyctl=/google/bin/releases/cloud-kernel-team/cusky/cuskyctl
 ## Hi
 source /etc/bash.bashrc.d/shell_history_forwarder.sh
 
@@ -39,3 +40,5 @@ PATH=$PATH:/usr/lib/google-golang/bin
 
 # kubectl
 source <(kubectl completion zsh)
+
+export COS_ROOT=$HOME/cos

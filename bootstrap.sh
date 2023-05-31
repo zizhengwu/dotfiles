@@ -52,7 +52,7 @@ sudo service docker start
 sudo addgroup docker || true
 sudo adduser $USER docker
 ~/.linuxbrew/bin/brew install kind k9s
-yes yes | /google/data/ro/teams/hi/install_hi.sh
+/google/data/ro/teams/hi/install_hi.sh
 cat <<EOF | sudo tee /etc/sudoers.d/nopasswd
 zizhengwu ALL=(ALL:ALL) NOPASSWD:ALL
 EOF

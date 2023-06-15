@@ -9,7 +9,7 @@ bashcompinit
 [[ -e /Users/zizhengwu/mdproxy/data/mdproxy_zshrc ]] && source /Users/zizhengwu/mdproxy/data/mdproxy_zshrc # MDPROXY-ZSHRC
 
 # Git
-export PATH=/usr/local/git/current/bin:$PATH
+export PATH=/usr/local/git/current/bin:/opt/homebrew/bin:$PATH
 
 # google-cloud-sdk
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc

@@ -42,3 +42,12 @@ PATH=$PATH:/usr/lib/google-golang/bin
 source <(kubectl completion zsh)
 
 export COS_ROOT=$HOME/cos
+cos_repo() {
+  if
+    [[ $PWD = /usr/local/google/home/zizhengwu/cos* && -d $HOME/depot_tools ]]
+  then
+    export PATH=$HOME/depot_tools:"$PATH"
+    chpwd_functions[(Ie)$0]=() # remove ourselves from the array
+  fi
+}
+chpwd_functions+=(cos_repo)

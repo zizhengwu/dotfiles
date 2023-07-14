@@ -3,3 +3,5 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 lvim.colorscheme = "shine"
+lvim.builtin.nvimtree.setup.view.side = "right"
+

@@ -90,7 +90,11 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  if command -v lvim > /dev/null 2>&1; then
+    export EDITOR='lvim'
+  else
+    export EDITOR='vim'
+  fi
 else
   export EDITOR="code -n -w"
 fi

@@ -2,17 +2,7 @@ gcert
 sudo glinux-add-repo -b docker-ce-"$(lsb_release -cs)"
 sudo glinux-add-repo -b typescript stable
 sudo apt update
-sudo apt -y install kubectl
-sudo apt install -y git
-sudo apt install -y intellij-ue-beta
-sudo apt install -y wget
-sudo apt install -y python3
-sudo apt install -y stow
-sudo apt install -y fzf
-sudo apt install -y google-cloud-sdk
-sudo apt install -y code visual-studio-code-google3
-sudo apt install -y git-remote-google
-sudo apt install -y google-cloud-sdk-anthos-auth
+sudo apt -y install kubectl git intellij-ue-beta wget python3 stow fzf google-cloud-sdk code visual-studio-code-google3 git-remote-google google-cloud-sdk-anthos-auth
 git clone --recurse-submodules https://github.com/zizhengwu/dotfiles.git $HOME/git/dotfiles
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 yes n | sh install.sh
@@ -22,15 +12,11 @@ git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/cust
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
 rm $HOME/.zshrc
-ln -s $HOME/git/dotfiles/ubuntu/.zshrc_google_glinux $HOME/.zshrc_google_glinux 
-ln -s $HOME/git/dotfiles/ubuntu/.zshrc_google_shared $HOME/.zshrc_google_shared
-ln -s $HOME/git/dotfiles/ubuntu/.zshrc $HOME/.zshrc
-ln -s $HOME/git/dotfiles/ubuntu/.p10k.zsh $HOME/.p10k.zsh
-ln -s ~/git/dotfiles/ubuntu/.hirc $HOME/.hirc
-bash ~/git/dotfiles/stow.sh
-git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew
-mkdir ~/.linuxbrew/bin
-ln -s ~/.linuxbrew/Homebrew/bin/brew ~/.linuxbrew/bin
+ln -s $HOME/git/dotfiles/ubuntu/.hirc $HOME/.hirc
+bash $HOME/git/dotfiles/stow.sh
+git clone https://github.com/Homebrew/brew $HOME/.linuxbrew/Homebrew
+mkdir $HOME/.linuxbrew/bin
+ln -s $HOME/.linuxbrew/Homebrew/bin/brew $HOME/.linuxbrew/bin
 sudo apt -y install docker-ce || true
 sudo service docker stop
 sudo ip link set docker0 down

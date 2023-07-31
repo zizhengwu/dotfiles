@@ -140,11 +140,11 @@ if [ -r $HOME/.zshrc_google_shared ] ; then
   source $HOME/.zshrc_google_shared
 fi
 
-if [ -r $HOME/.zshrc_google_glinux ] ; then
+if uname -a | grep -q 'rodete'; then
   source $HOME/.zshrc_google_glinux
 fi
 
-if [ -r $HOME/.zshrc_google_macos ] ; then
+if [[ "$(uname)" == "Darwin" ]]; then
   source $HOME/.zshrc_google_macos
 fi
 

@@ -7,6 +7,7 @@ bashcompinit
 
 # MacOS Devtools Proxy
 [[ -e /Users/zizhengwu/mdproxy/data/mdproxy_zshrc ]] && source /Users/zizhengwu/mdproxy/data/mdproxy_zshrc # MDPROXY-ZSHRC
+export MDPROXY_EXTRA_MOUNTS="/google/data"
 
 # Git
 export PATH=/usr/local/git/current/bin:/opt/homebrew/bin:$PATH

@@ -23,7 +23,7 @@ hgforget() {
 }
 
 # Anthos bare metal
-export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Documents/baremetal-zizhengwu/gcr.json"
+# export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Documents/baremetal-zizhengwu/gcr.json"
 export KEEP_CLUSTER_IN_E2E_TEST=true
 export TEST_UPGRADE_IN_E2E_TEST=false
 gcloudssh() {
@@ -33,4 +33,15 @@ gauth() {
   gcert
   gcloud auth print-access-token
   gsutil cp gs://anthos-baremetal-staging/cni-plugins/v0.8.7-gke.0/cni-plugins-linux-amd64-v0.8.7-gke.0.tgz /tmp
+}
+gdce_export() {
+  export LOCATION=us-west1
+  export PROJECT=gdce-dev-zizhengwu
+  export GMEC_ABM_SANDBOX_PROJECT=gmec-abm-sandbox-1
+  export CLUSTER=zizhengwu-cluster-1
+  export NODEPOOL=zizhengwu-nodepool-1
+  export NODEPOOL_LOCATION=us-west1-edge-zizhengwu-custom-0
+  export NODE_COUNT=3
+  export OPERATION_ID=operation-1694141794169-604d01fd733e1-ed0778ee-7f5a905e
+  export EDGESITE_PROJECT=edgesites-gce-autopush
 }

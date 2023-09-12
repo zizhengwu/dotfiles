@@ -5,3 +5,4 @@
 lvim.colorscheme = "shine"
 lvim.builtin.nvimtree.setup.view.side = "right"
 
+vim.opt.wrap = true

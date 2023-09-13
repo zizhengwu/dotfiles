@@ -44,4 +44,10 @@ gdce_export() {
   export NODE_COUNT=3
   export OPERATION_ID=operation-1694141794169-604d01fd733e1-ed0778ee-7f5a905e
   export EDGESITE_PROJECT=edgesites-gce-autopush
+  export MACHINE_0=zizhengwu-custom-0-instance-0-zw07
+  export MACHINE_1=zizhengwu-custom-0-instance-1-m5fl
+  export MACHINE_2=zizhengwu-custom-0-instance-2-70rf
+  export ZONE_0=us-west1-c
+  export ZONE_1=us-west1-a
+  export ZONE_2=us-west1-b
 }

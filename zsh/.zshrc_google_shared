@@ -51,3 +51,4 @@ gdce_export() {
   export ZONE_1=us-west1-a
   export ZONE_2=us-west1-b
 }
+gdce_export

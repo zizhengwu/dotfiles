@@ -16,6 +16,7 @@ alias cclean='/google/src/head/depot/google3/devtools/maintenance/cclean/cclean'
 alias polyjuice='/google/bin/releases/internetto/tools/polyjuice/polyjuice'
 alias apido=/google/data/ro/teams/oneplatform/apido
 alias cuskyctl=/google/bin/releases/cloud-kernel-team/cusky/cuskyctl
+alias terraform="/google/data/ro/teams/terraform/bin/terraform"
 ## Hi
 source /etc/bash.bashrc.d/shell_history_forwarder.sh
 

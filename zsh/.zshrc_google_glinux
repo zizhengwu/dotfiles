@@ -17,6 +17,9 @@ alias polyjuice='/google/bin/releases/internetto/tools/polyjuice/polyjuice'
 alias apido=/google/data/ro/teams/oneplatform/apido
 alias cuskyctl=/google/bin/releases/cloud-kernel-team/cusky/cuskyctl
 alias terraform="/google/data/ro/teams/terraform/bin/terraform"
+alias bacon=/google/bin/releases/acq-netops/oob/bin/bacon
+alias pancetta="/google/bin/releases/bandaid-team/pancetta_par/pancetta.par"
+alias batool=/google/data/ro/projects/bandaid/batool
 ## Hi
 source /etc/bash.bashrc.d/shell_history_forwarder.sh
 

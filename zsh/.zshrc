@@ -89,7 +89,7 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]] || grep -q "WSL2" /proc/version; then
+if [[ -n $SSH_CONNECTION ]] || { [ -f /proc/version ] && grep -q "WSL2" /proc/version; }; then
   if command -v lvim > /dev/null 2>&1; then
     export VISUAL='lvim'
   else

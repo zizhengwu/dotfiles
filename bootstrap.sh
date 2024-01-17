@@ -38,13 +38,16 @@ EOF
 sudo service docker start
 sudo addgroup docker || true
 sudo adduser $USER docker
-~/.linuxbrew/bin/brew install kind k9s neovim
-/google/data/ro/teams/hi/install_hi.sh
 cat <<EOF | sudo tee /etc/sudoers.d/nopasswd
 zizhengwu ALL=(ALL:ALL) NOPASSWD:ALL
 EOF
-sudo glinux-config set custom_etc_sudoers_d true
+~/.linuxbrew/bin/brew install kind k9s neovim
 git clone sso://gke-internal/syllogi/baremetal ~/git/baremetal
 git clone sso://user/zizhengwu/baremetal-zizhengwu ~/Documents/baremetal-zizhengwu
 gcloud auth login
 gcloud config set project baremetal-zizhengwu
+
+# Require interactions
+sudo glinux-config set custom_etc_sudoers_d true
+sudo glinux-config set backups_exclude_dot_git no
+/google/data/ro/teams/hi/install_hi.sh

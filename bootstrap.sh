@@ -2,7 +2,7 @@ gcert
 sudo glinux-add-repo -b docker-ce-"$(lsb_release -cs)"
 sudo glinux-add-repo -b typescript stable
 sudo apt update
-sudo apt -y install kubectl git intellij-ue-beta wget python3 stow fzf google-cloud-sdk code visual-studio-code-google3 git-remote-google google-cloud-sdk-anthos-auth libvirt-daemon qemu-kvm virt-manager virt-viewer bridge-utils
+sudo apt -y install kubectl git intellij-ue-beta wget python3 stow fzf google-cloud-sdk code visual-studio-code-google3 git-remote-google google-cloud-sdk-anthos-auth libvirt-daemon qemu-kvm virt-manager virt-viewer bridge-utils google-cloud-sdk-gke-gcloud-auth-plugin
 git clone --recurse-submodules https://github.com/zizhengwu/dotfiles.git $HOME/git/dotfiles
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 yes n | sh install.sh

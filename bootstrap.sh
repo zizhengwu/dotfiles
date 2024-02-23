@@ -11,12 +11,23 @@ git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-m
 git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/alias-tips
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
-rm $HOME/.zshrc
-ln -s $HOME/git/dotfiles/ubuntu/.hirc $HOME/.hirc
+rm $HOME/.zshrc $HOME/.hirc
 bash $HOME/git/dotfiles/stow.sh
 git clone https://github.com/Homebrew/brew $HOME/.linuxbrew/Homebrew
 mkdir $HOME/.linuxbrew/bin
 ln -s $HOME/.linuxbrew/Homebrew/bin/brew $HOME/.linuxbrew/bin
+~/.linuxbrew/bin/brew install kind k9s neovim
+cat <<EOF | sudo tee /etc/sudoers.d/nopasswd
+zizhengwu ALL=(ALL:ALL) NOPASSWD:ALL
+EOF
+
+# Require interactions
+sudo glinux-config set custom_etc_sudoers_d true
+sudo glinux-config set backups_exclude_dot_git no
+/google/data/ro/teams/hi/install_hi.sh
+
+# Old
+
 sudo apt -y install docker-ce || true
 sudo service docker stop
 sudo ip link set docker0 down
@@ -38,16 +49,8 @@ EOF
 sudo service docker start
 sudo addgroup docker || true
 sudo adduser $USER docker
-cat <<EOF | sudo tee /etc/sudoers.d/nopasswd
-zizhengwu ALL=(ALL:ALL) NOPASSWD:ALL
-EOF
-~/.linuxbrew/bin/brew install kind k9s neovim
+
 git clone sso://gke-internal/syllogi/baremetal ~/git/baremetal
 git clone sso://user/zizhengwu/baremetal-zizhengwu ~/Documents/baremetal-zizhengwu
 gcloud auth login
 gcloud config set project baremetal-zizhengwu
-
-# Require interactions
-sudo glinux-config set custom_etc_sudoers_d true
-sudo glinux-config set backups_exclude_dot_git no
-/google/data/ro/teams/hi/install_hi.sh

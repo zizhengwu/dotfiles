@@ -22,12 +22,12 @@ zizhengwu ALL=(ALL:ALL) NOPASSWD:ALL
 EOF
 
 # Require interactions
+sudo glinux-config set backups_exclude_dot_git no
 sudo glinux-config set custom_etc_sudoers_d true
 sudo glinux-config set backups_exclude_dot_git no
 /google/data/ro/teams/hi/install_hi.sh
 
 # Old
-
 sudo apt -y install docker-ce || true
 sudo service docker stop
 sudo ip link set docker0 down

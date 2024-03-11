@@ -13,13 +13,15 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZS
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
 rm $HOME/.zshrc $HOME/.hirc
 bash $HOME/git/dotfiles/stow.sh
+cat <<EOF | sudo tee /etc/sudoers.d/nopasswd
+zizhengwu ALL=(ALL:ALL) NOPASSWD:ALL
+EOF
+
+# glinux homebrew
 git clone https://github.com/Homebrew/brew $HOME/.linuxbrew/Homebrew
 mkdir $HOME/.linuxbrew/bin
 ln -s $HOME/.linuxbrew/Homebrew/bin/brew $HOME/.linuxbrew/bin
 ~/.linuxbrew/bin/brew install kind k9s neovim
-cat <<EOF | sudo tee /etc/sudoers.d/nopasswd
-zizhengwu ALL=(ALL:ALL) NOPASSWD:ALL
-EOF
 
 # Require interactions
 sudo glinux-config set custom_etc_sudoers_d true

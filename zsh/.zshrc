@@ -123,6 +123,9 @@ TERM=xterm-256color
 [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh # debian
 [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh # debian
 
+# fzf-z
+FZFZ_SUBDIR_LIMIT=0 # Exclude directories under the current directory
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"

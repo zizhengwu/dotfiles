@@ -13,5 +13,5 @@ export MDPROXY_EXTRA_MOUNTS="/google/data"
 export PATH=/usr/local/git/current/bin:/opt/homebrew/bin:$PATH
 
 # google-cloud-sdk
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"

@@ -21,6 +21,7 @@ alias bacon=/google/bin/releases/acq-netops/oob/bin/bacon
 alias pancetta="/google/bin/releases/bandaid-team/pancetta_par/pancetta.par"
 alias batool=/google/data/ro/projects/bandaid/batool
 alias bandaidcfg=/google/data/ro/projects/bandaid/bandaidcfg
+alias safergcp=/google/bin/releases/safer-gcp/tools/safergcp
 ## Hi
 source /etc/bash.bashrc.d/shell_history_forwarder.sh
 

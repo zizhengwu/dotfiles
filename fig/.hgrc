@@ -1,5 +1,6 @@
 [alias]
 export = uploadchain
+watch = ! /google/src/head/depot/google3/experimental/users/blkbsstt/fig/figwatch
 
 [ui]
 username = zizhengwu
@@ -12,6 +13,7 @@ churn =
 purge =
 strip =
 journal =
+mq =
 
 [merge-tools]
 bcomp.args = $local $other $base $output

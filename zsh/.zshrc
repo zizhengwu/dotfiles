@@ -69,6 +69,10 @@ export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin
 
 source $ZSH/oh-my-zsh.sh
 
+# linuxbrew
+[[ -s /home/linuxbrew/.linuxbrew/bin/brew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+[[ -s $HOME/.linuxbrew/bin/brew ]] && eval $($HOME/.linuxbrew/bin/brew shellenv)
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -91,7 +95,7 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]] || { [ -f /proc/version ] && grep -q "WSL2" /proc/version; }; then
-  if command -v nvim > /dev/null 2>&1; then
+  if command -v nvim 1>/dev/null 2>&1; then
     export VISUAL='nvim'
   else
     export VISUAL='vim'
@@ -157,10 +161,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# linuxbrew
-[[ -s /home/linuxbrew/.linuxbrew/bin/brew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-[[ -s $HOME/.linuxbrew/bin/brew ]] && eval $($HOME/.linuxbrew/bin/brew shellenv)
 
 # env vars
 export GROFF_NO_SGR=1 # https://github.com/vim/vim/issues/2823

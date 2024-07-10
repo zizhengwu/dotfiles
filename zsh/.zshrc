@@ -91,8 +91,8 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]] || { [ -f /proc/version ] && grep -q "WSL2" /proc/version; }; then
-  if command -v lvim > /dev/null 2>&1; then
-    export VISUAL='lvim'
+  if command -v nvim > /dev/null 2>&1; then
+    export VISUAL='nvim'
   else
     export VISUAL='vim'
   fi

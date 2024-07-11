@@ -43,7 +43,12 @@ return {
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
-
+        ["<Leader>q"] = "q",
+        ["<Leader>q:"] = "q:",
+        ["q"] = "<nop>",
+        ["q:"] = "<nop>",
+        ["<Leader>e"] = "<nop>",
+        ["<Leader>1"] = "<cmd>Neotree toggle reveal<cr>",
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },

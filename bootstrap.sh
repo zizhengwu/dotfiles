@@ -20,7 +20,7 @@ EOF
 git clone https://github.com/Homebrew/brew $HOME/.linuxbrew/Homebrew
 mkdir $HOME/.linuxbrew/bin
 ln -s $HOME/.linuxbrew/Homebrew/bin/brew $HOME/.linuxbrew/bin
-~/.linuxbrew/bin/brew install kind k9s neovim
+~/.linuxbrew/bin/brew install kind k9s neovim ripgrep
 
 # Require interactions
 sudo glinux-config set custom_etc_sudoers_d true

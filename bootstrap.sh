@@ -3,7 +3,7 @@ sudo glinux-add-repo -b docker-ce-"$(lsb_release -cs)"
 sudo glinux-add-repo -b typescript stable
 sudo apt update
 sudo apt -y install build-essential zsh git wget python3 stow fzf
-sudo apt -y install kubectl intellij-ue-beta google-cloud-sdk code visual-studio-code-google3 git-remote-google google-cloud-sdk-anthos-auth google-cloud-sdk-gke-gcloud-auth-plugin libvirt-daemon qemu-kvm virt-manager virt-viewer bridge-utils
+sudo apt -y install kubectl intellij-ue-beta google-cloud-sdk code visual-studio-code-google3 git-remote-google google-cloud-sdk-anthos-auth google-cloud-sdk-gke-gcloud-auth-plugin libvirt-daemon qemu-kvm virt-manager virt-viewer bridge-utils ansible
 git clone --recurse-submodules https://github.com/zizhengwu/dotfiles.git $HOME/git/dotfiles
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 yes n | sh install.sh
@@ -20,14 +20,14 @@ EOF
 git clone https://github.com/Homebrew/brew $HOME/.linuxbrew/Homebrew
 mkdir $HOME/.linuxbrew/bin
 ln -s $HOME/.linuxbrew/Homebrew/bin/brew $HOME/.linuxbrew/bin
-~/.linuxbrew/bin/brew install kind k9s neovim ripgrep
+~/.linuxbrew/bin/brew install kind k9s neovim ripgrep kubectl
 
 # Require interactions
 sudo glinux-config set custom_etc_sudoers_d true
 sudo glinux-config set backups_exclude_dot_git no
 /google/data/ro/teams/hi/install_hi.sh
 
-# Old
+# Old for abm and docker
 sudo apt -y install docker-ce || true
 sudo service docker stop
 sudo ip link set docker0 down

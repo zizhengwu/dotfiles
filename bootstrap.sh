@@ -23,6 +23,7 @@ ln -s $HOME/.linuxbrew/Homebrew/bin/brew $HOME/.linuxbrew/bin
 ~/.linuxbrew/bin/brew install kind k9s neovim ripgrep kubectl
 
 # Require interactions
+sudo glinux-config set timezone America/Los_Angeles
 sudo glinux-config set custom_etc_sudoers_d true
 sudo glinux-config set backups_exclude_dot_git no
 /google/data/ro/teams/hi/install_hi.sh

@@ -24,6 +24,7 @@ alias bandaidcfg=/google/data/ro/projects/bandaid/bandaidcfg
 alias safergcp=/google/bin/releases/safer-gcp/tools/safergcp
 alias edgeconctl=/google/bin/releases/cloud-kubernetes-edge-team/edgeconctl/edgeconctl
 alias slm=/google/data/ro/teams/cloud-ssa/common/slm
+alias centiutil=/google/data/ro/teams/centigrate/centiutil/centiutil
 ## Hi
 source /etc/bash.bashrc.d/shell_history_forwarder.sh
 

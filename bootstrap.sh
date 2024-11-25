@@ -5,9 +5,6 @@ sudo apt update
 sudo apt -y install build-essential zsh git wget python3 stow fzf htop xfsprogs
 sudo apt -y install kubectl intellij-ue-beta google-cloud-sdk git-remote-google google-cloud-sdk-anthos-auth google-cloud-sdk-gke-gcloud-auth-plugin libvirt-daemon qemu-kvm virt-manager virt-viewer bridge-utils ansible aria2 qemu-utils google-guitar
 git clone --recurse-submodules https://github.com/zizhengwu/dotfiles.git $HOME/git/dotfiles
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-yes n | sh install.sh
-rm install.sh
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
 rm $HOME/.zshrc $HOME/.hirc
 bash $HOME/git/dotfiles/stow.sh

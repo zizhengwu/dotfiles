@@ -8,7 +8,6 @@ git clone --recurse-submodules https://github.com/zizhengwu/dotfiles.git $HOME/g
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
 rm $HOME/.zshrc $HOME/.hirc
 bash $HOME/git/dotfiles/stow.sh
-$HOME/git/dotfiles/update_omz_plugin.sh
 cat <<EOF | sudo tee /etc/sudoers.d/nopasswd
 zizhengwu ALL=(ALL:ALL) NOPASSWD:ALL
 EOF

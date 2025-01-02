@@ -79,6 +79,13 @@ z4h bindkey z4h-cd-down    Shift+Down   # cd into a child directory
 # Autoload functions.
 autoload -Uz zmv
 
+# Enable Ctrl-x-e to edit command line
+autoload -U edit-command-line
+# Emacs style
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
+
 # Define functions and completions.
 function md() { [[ $# == 1 ]] && mkdir -p -- "$1" && cd -- "$1" }
 compdef _directories md

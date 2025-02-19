@@ -33,6 +33,7 @@ gauth() {
   gcert
   gcloud auth print-access-token
   gsutil cp gs://anthos-baremetal-staging/cni-plugins/v0.8.7-gke.0/cni-plugins-linux-amd64-v0.8.7-gke.0.tgz /tmp
+  gsutil cp gs://gdce-infra-devtest/rocky-upstream-rpms/sudo-1.9.15-6.el9.x86_64.rpm /tmp
 }
 gdce_export() {
   export LOCATION=us-west1

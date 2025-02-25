@@ -105,6 +105,9 @@ export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin
 [[ -s /home/linuxbrew/.linuxbrew/bin/brew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 [[ -s $HOME/.linuxbrew/bin/brew ]] && eval $($HOME/.linuxbrew/bin/brew shellenv)
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 

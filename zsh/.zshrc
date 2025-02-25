@@ -104,6 +104,8 @@ export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin
 # linuxbrew
 [[ -s /home/linuxbrew/.linuxbrew/bin/brew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 [[ -s $HOME/.linuxbrew/bin/brew ]] && eval $($HOME/.linuxbrew/bin/brew shellenv)
+# homebrew macOS
+export PATH="/opt/homebrew/bin:$PATH"
 
 # zoxide
 eval "$(zoxide init zsh)"

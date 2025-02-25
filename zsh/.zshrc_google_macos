@@ -9,8 +9,8 @@ bashcompinit
 [[ -e /Users/zizhengwu/mdproxy/data/mdproxy_zshrc ]] && source /Users/zizhengwu/mdproxy/data/mdproxy_zshrc # MDPROXY-ZSHRC
 export MDPROXY_EXTRA_MOUNTS="/google/data"
 
-# Git
-export PATH=/usr/local/git/current/bin:/opt/homebrew/bin:"/Applications/Visual Studio Code.app/Contents/Resources/app/bin":$PATH
+# VSCode
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin":$PATH
 
 # google-cloud-sdk
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"

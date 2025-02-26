@@ -3,7 +3,7 @@ sudo glinux-add-repo -b docker-ce-"$(lsb_release -cs)"
 sudo glinux-add-repo -b typescript stable
 sudo apt update
 sudo apt -y install build-essential zsh git wget python3 stow fzf htop xfsprogs pbzip2
-sudo apt -y install kubectl intellij-ue-beta google-cloud-cli google-cloud-sdk git-remote-google google-cloud-sdk-anthos-auth google-cloud-sdk-gke-gcloud-auth-plugin libvirt-daemon qemu-kvm virt-manager virt-viewer bridge-utils ansible aria2 qemu-utils google-guitar rapid-tool
+sudo apt -y install kubectl intellij-ue-beta google-cloud-cli git-remote-google libvirt-daemon qemu-kvm virt-manager virt-viewer bridge-utils ansible aria2 qemu-utils google-guitar rapid-tool
 git clone --recurse-submodules https://github.com/zizhengwu/dotfiles.git $HOME/git/dotfiles
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
 rm $HOME/.zshrc $HOME/.hirc

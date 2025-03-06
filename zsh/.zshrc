@@ -57,6 +57,9 @@ z4h init || return
 
 # Export environment variables.
 export GPG_TTY=$TTY
+# beautiful man
+export GROFF_NO_SGR=1 # https://github.com/vim/vim/issues/2823
+export MANPAGER="/bin/sh -c \"col -b | $EDITOR -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
@@ -106,9 +109,6 @@ export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin
 [[ -s $HOME/.linuxbrew/bin/brew ]] && eval $($HOME/.linuxbrew/bin/brew shellenv)
 # homebrew macOS
 export PATH="/opt/homebrew/bin:$PATH"
-
-# zoxide
-eval "$(zoxide init zsh)"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -161,6 +161,9 @@ if command -v rbenv 1>/dev/null 2>&1; then
   eval "$(rbenv init -)"
 fi
 
+# iterm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 # google
 if [ -r $HOME/.zshrc_google_shared ] ; then
   source $HOME/.zshrc_google_shared
@@ -174,9 +177,10 @@ if [[ "$(uname)" == "Darwin" ]]; then
   source $HOME/.zshrc_google_macos
 fi
 
-# iterm2
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# google
+if [ -r $HOME/.zshrc_last ] ; then
+  source $HOME/.zshrc_last
+fi
 
-# env vars
-export GROFF_NO_SGR=1 # https://github.com/vim/vim/issues/2823
-export MANPAGER="/bin/sh -c \"col -b | $EDITOR -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+# annoying added by google, just ignore
+[[ -e "/Users/zizhengwu/mdproxy/data/mdproxy_zshrc" ]] && source "/Users/zizhengwu/mdproxy/data/mdproxy_zshrc" # MDPROXY-ZSHRC

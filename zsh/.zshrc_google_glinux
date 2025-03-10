@@ -53,8 +53,9 @@ source <(kubectl completion zsh)
 export COS_ROOT=$HOME/cos
 cos_repo() {
   if
-    [[ $PWD = /usr/local/google/home/zizhengwu/cos* && -d $HOME/depot_tools ]]
+    [[ $PWD =~ '^(/usr/local/google/home/zizhengwu/cos[^/]*)$' && -d $HOME/depot_tools ]]
   then
+    export COS_ROOT="$match[1]"
     export PATH=$HOME/depot_tools:"$PATH"
     chpwd_functions[(Ie)$0]=() # remove ourselves from the array
   fi

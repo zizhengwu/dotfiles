@@ -57,7 +57,6 @@ cos_repo() {
   then
     export COS_ROOT="$match[1]"
     export PATH=$HOME/depot_tools:"$PATH"
-    chpwd_functions[(Ie)$0]=() # remove ourselves from the array
   fi
 }
 chpwd_functions+=(cos_repo)

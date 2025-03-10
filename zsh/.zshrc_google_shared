@@ -1,5 +1,6 @@
 # google internal tools
 alias irabbit='iblaze --iblaze_blaze_binary rabbit'
+alias atlssh="sshuttle --no-latency-control --ns-hosts 127.0.0.1 -r gpc@s17.ceplabs.dev -x s17.ceplabs.dev 21.64.0.0/19 10.128.0.0/13 10.136.0.0/13 10.144.0.0/20 10.248.0.0/16 10.249.0/16 10.250.0.0/16 10.251.0.0/16 10.252.0.0/16 10.253.0.0/16 10.254.32.0/19"
 
 # config
 export MY_TERMINAL_SPACE_IS_MORE_VALUABLE_THAN_YOUR_CREATIVE_EXPRESSION=1

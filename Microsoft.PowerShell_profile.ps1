@@ -1,5 +1,6 @@
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/probua.minimal.omp.json" | Invoke-Expression
 Import-Module PSReadLine
+Set-PSReadLineOption -EditMode Emacs
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 Import-Module -Name Terminal-Icons
@@ -26,3 +27,6 @@ $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
+
+$profileDir = Split-Path -Parent $PSCommandPath
+. (Join-Path $profileDir 'EditConsoleInput.ps1')

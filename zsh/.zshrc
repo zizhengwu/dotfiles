@@ -164,23 +164,6 @@ fi
 # iterm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# google
-if [ -r $HOME/.zshrc_google_shared ] ; then
-  source $HOME/.zshrc_google_shared
-fi
-
-if uname -a | grep -q 'rodete'; then
-  source $HOME/.zshrc_google_glinux
-fi
-
-if [[ "$(uname)" == "Darwin" ]]; then
-  source $HOME/.zshrc_google_macos
-fi
-
-# google
 if [ -r $HOME/.zshrc_last ] ; then
   source $HOME/.zshrc_last
 fi
-
-# annoying added by google, just ignore
-[[ -e "/Users/zizhengwu/mdproxy/data/mdproxy_zshrc" ]] && source "/Users/zizhengwu/mdproxy/data/mdproxy_zshrc" # MDPROXY-ZSHRC

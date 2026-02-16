@@ -167,3 +167,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 if [ -r $HOME/.zshrc_last ] ; then
   source $HOME/.zshrc_last
 fi
+
+if [ -r $HOME/.zshrc_cn_gfw ] ; then
+  source $HOME/.zshrc_cn_gfw
+fi

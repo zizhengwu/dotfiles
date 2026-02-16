@@ -16,7 +16,7 @@ EOF
 git clone https://github.com/Homebrew/brew $HOME/.linuxbrew/Homebrew
 mkdir $HOME/.linuxbrew/bin
 ln -s $HOME/.linuxbrew/Homebrew/bin/brew $HOME/.linuxbrew/bin
-~/.linuxbrew/bin/brew install kind k9s neovim ripgrep kubectl zoxide
+~/.linuxbrew/bin/brew install kind k9s neovim ripgrep kubectl zoxide eza bat fd ripgrep delta
 
 # Require interactions
 sudo glinux-config -UX set timezone America/Los_Angeles

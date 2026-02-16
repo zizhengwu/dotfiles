@@ -57,9 +57,6 @@ z4h init || return
 
 # Export environment variables.
 export GPG_TTY=$TTY
-# beautiful man
-export GROFF_NO_SGR=1 # https://github.com/vim/vim/issues/2823
-export MANPAGER="/bin/sh -c \"col -b | $EDITOR -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
@@ -130,6 +127,11 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
+TERM=xterm-256color
+
+# Aliases
+alias gg="git log --graph --decorate --oneline"
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]] || { [ -f /proc/version ] && grep -q "WSL2" /proc/version; }; then
   if command -v nvim 1>/dev/null 2>&1; then
@@ -142,12 +144,9 @@ else
 fi
 export EDITOR="$VISUAL"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gg="git log --graph --decorate --oneline"
-
-TERM=xterm-256color
+# beautiful man
+export GROFF_NO_SGR=1 # https://github.com/vim/vim/issues/2823
+export MANPAGER="/bin/sh -c \"col -b | $EDITOR -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"

@@ -31,3 +31,4 @@ if (Test-Path($ChocolateyProfile)) {
 
 $profileDir = Split-Path -Parent $PSCommandPath
 . (Join-Path $profileDir 'EditConsoleInput.ps1')
+Invoke-Expression (& { (zoxide init powershell | Out-String) })

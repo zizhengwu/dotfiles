@@ -1,9 +1,29 @@
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/probua.minimal.omp.json" | Invoke-Expression
 Import-Module PSReadLine
 Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineKeyHandler -Key Ctrl+Shift+v -Function Paste
 Set-PSReadLineKeyHandler -Key Ctrl+w -Function BackwardKillWord
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+# zsh-ish: HIST_FIND_NO_DUPS
+Set-PSReadLineOption -HistoryNoDuplicates
+# zsh-ish: HIST_IGNORE_DUPS
+Set-PSReadLineOption -AddToHistoryHandler {
+    param([string] $line)
+
+    if ([string]::IsNullOrWhiteSpace($line)) {
+        return 'SkipAdding'
+    }
+
+    $items = [Microsoft.PowerShell.PSConsoleReadLine]::GetHistoryItems()
+    $last = if ($items.Count) { $items[-1].CommandLine } else { $null }
+
+    if ($line -eq $last) {
+        return 'SkipAdding'
+    }
+
+    return 'MemoryAndFile'
+}
 Import-Module -Name Terminal-Icons
 Set-PSReadLineOption -Colors @{
    "Default"   = [ConsoleColor]::Black

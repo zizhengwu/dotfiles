@@ -76,6 +76,10 @@ z4h bindkey z4h-cd-forward Shift+Right  # cd into the next directory
 z4h bindkey z4h-cd-up      Shift+Up     # cd into the parent directory
 z4h bindkey z4h-cd-down    Shift+Down   # cd into a child directory
 
+# Atuin
+eval "$(atuin init zsh --disable-up-arrow)"
+z4h bindkey atuin-search Ctrl+R
+
 # Autoload functions.
 autoload -Uz zmv
 
